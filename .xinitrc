@@ -1,6 +1,10 @@
-setxkbmap br
+#setxkbmap br
+#setxkbmap -option caps:escape
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+xset r rate 250 35  # set keyboard repeat rate
 nitrogen --restore &
-picom &
+#picom &
+#emacs --daemon &
 
 
 dte(){
